@@ -15,7 +15,7 @@ import io.flutter.plugin.common.MethodChannel
 import android.net.Uri
 
 class MainActivity : FlutterActivity() {
-    private val CHANNEL = "com.sizh.rideon.driver.taxiapp/floating_bubble"
+    private val CHANNEL = "com.tochegando.motoboy.taxiapp/floating_bubble"
     private val TAG = "MainActivity"
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {

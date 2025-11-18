@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
-import 'package:ride_on_driver/presentation/screens/Splash/splash_screen.dart';
-import 'package:ride_on_driver/presentation/screens/bottom_bar/home_main.dart';
+import 'package:tochegando_motoboy/presentation/screens/Splash/splash_screen.dart';
+import 'package:tochegando_motoboy/presentation/screens/bottom_bar/home_main.dart';
 
 import '../../../core/extensions/workspace.dart';
 import '../../../core/utils/theme/project_color.dart';
