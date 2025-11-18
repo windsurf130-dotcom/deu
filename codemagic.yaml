@@ -5,7 +5,6 @@ workflows:
     environment:
       flutter: stable
       java: 17
-      android: latest
       vars:
         KEYSTORE_BASE64: $KEYSTORE_BASE64
         KEYSTORE_PASSWORD: "123456"
