@@ -1,19 +1,32 @@
 workflows:
   android-release:
-    name: Build Android Release APK and AAB
+    name: Build Android Release
     max_build_duration: 60
     environment:
       flutter: stable
-      xcode: latest
+      java: 17
+      vars:
+        KEYSTORE_PASSWORD: "123456"
+        KEY_ALIAS_PASSWORD: "123456"
+        KEY_ALIAS: "alex"
+
     scripts:
-      - name: Clean
+      - name: Decode keystore
+        script: |
+          echo $KEYSTORE_BASE64 | base64 --decode > android/app/release-key.keystore
+
+      - name: Clean project
         script: flutter clean
-      - name: Get dependencies
+
+      - name: Install dependencies
         script: flutter pub get
+
       - name: Build APK
         script: flutter build apk --release
-      - name: Build App Bundle
+
+      - name: Build AAB
         script: flutter build appbundle --release
+
     artifacts:
       - build/app/outputs/flutter-apk/app-release.apk
       - build/app/outputs/bundle/release/app-release.aab
