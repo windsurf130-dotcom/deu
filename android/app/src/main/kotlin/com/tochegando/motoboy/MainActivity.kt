@@ -1,4 +1,4 @@
-package com.sizh.rideon.driver.taxiapp
+package com.tochegando.motoboy
 import android.content.Context
 import android.content.Intent
 import android.graphics.PixelFormat
